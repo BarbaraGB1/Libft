@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 18:49:39 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/27 13:30:29 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:28:12 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,11 +39,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-int main(void)
+/*int main(void)
 {
 	char  *s1;
 	char *s2;
 	s1 = "";
 	s2 = "";
 	printf("%s", ft_strjoin(s1, s2));
-}
+}*/

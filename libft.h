@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:11:46 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/24 18:48:23 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/03/29 20:36:29 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,6 @@ void	ft_putendl_fd(char *s, int fd);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 #endif
