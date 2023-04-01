@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:49:10 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/27 15:40:56 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:52:22 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	x;
 
 	i = 0;
-	if (dstsize== 0)
+	if (dstsize == 0)
 		return (ft_strlen(src));
 	x = ft_strlen(dst);
 	if (dstsize <= x)

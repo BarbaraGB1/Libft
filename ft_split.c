@@ -6,11 +6,11 @@
 /*   By: bargarci <bargarci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:44:05 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/01 19:14:50 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:50:25 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-//#include "stdio.h"
+
 int	ft_count(char const *s, char c)
 {
 	int	i;
@@ -26,26 +26,25 @@ int	ft_count(char const *s, char c)
 			while ((s[i] != '\0') && s[i] != c)
 				i++;
 		}
-		else	
+		else
 			i++;
 	}
-//	printf("%d", count);
 	return (count);
 }
 
 int	ft_len(char const *s, char c, int i)
 {
 	int	p;
-	
+
 	p = 0;
 	while (s[i] != c && s[i] != '\0')
 	{
 		p++;
 		i++;
 	}
-//	printf("%d\n", p);
 	return (p);
-}	
+}
+
 int	ft_free(char **str, int j)
 {
 	int	i;
@@ -59,22 +58,21 @@ int	ft_free(char **str, int j)
 	free (str);
 	return (0);
 }
-char **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	int count;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
 	if (!s)
 		return (0);
-	count = ft_count(s, c);
-	str = malloc(sizeof(char *) * (count + 1));
+	str = malloc(sizeof(char *) * (ft_count(s, c) + 1));
 	if (!str)
 		return (0);
-	while (j < count)
+	while (j < ft_count(s, c))
 	{
 		if (s[i] != c)
 		{
@@ -82,8 +80,7 @@ char **ft_split(char const *s, char c)
 			i += ft_len(s, c, i);
 			if (!str[j])
 			{
-				if (!ft_free(str, j))
-						return (0);
+				ft_free(str, j);
 				return (0);
 			}
 			j++;
