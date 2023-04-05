@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:29:17 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/01 18:32:55 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:06:06 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	lens = ft_strlen(s);
-	if (len > lens)
+	if ((len > lens) || ((start + len) > lens))
 		len = ft_strlen(s) - start;
 	if (start >= lens)
 		return (ft_strdup(""));
@@ -33,11 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!str)
 		return (NULL);
 	while (j < len)
-	{	
-			str[j] = s[i];
-		i++;
-		j++;
-	}
+		str[j++] = s[i++];
 	str[j] = '\0';
 	return (str);
 }

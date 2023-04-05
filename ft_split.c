@@ -6,7 +6,7 @@
 /*   By: bargarci <bargarci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:44:05 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/01 19:50:25 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/04 18:59:00 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -45,7 +45,7 @@ int	ft_len(char const *s, char c, int i)
 	return (p);
 }
 
-int	ft_free(char **str, int j)
+char	**ft_free(char **str, int j)
 {
 	int	i;
 
@@ -74,18 +74,13 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	while (j < ft_count(s, c))
 	{
-		if (s[i] != c)
-		{
-			str[j] = ft_substr(s, i, ft_len(s, c, i));
-			i += ft_len(s, c, i);
-			if (!str[j])
-			{
-				ft_free(str, j);
-				return (0);
-			}
-			j++;
-		}
-		i++;
+		while (s[i] == c)
+			i++;
+		str[j] = ft_substr(s, i, ft_len(s, c, i));
+		i += ft_len(s, c, i);
+		if (!str[j])
+			return (ft_free(str, j));
+		j++;
 	}
 	str[j] = 0;
 	return (str);
