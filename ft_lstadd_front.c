@@ -6,11 +6,12 @@
 /*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 19:26:27 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/05 19:47:04 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/10 18:15:18 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-void ft_lstadd_front(t_list **lst, t_list *new)
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;

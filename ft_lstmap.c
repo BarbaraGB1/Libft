@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 16:01:05 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/12 16:15:39 by bargarci         ###   ########.fr       */
+/*   Created: 2023/04/11 20:06:22 by bargarci          #+#    #+#             */
+/*   Updated: 2023/04/12 16:33:50 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*nodo1;
+	t_list	*iter;
+	t_list	*new_node;
+	t_list	*map;
+	void	*content;
 
-	nodo1 = malloc(sizeof(t_list));
-	if (!nodo1)
+	iter = lst;
+	if (!iter || !f  || !del)
 		return (0);
-	nodo1->content = content;
-	nodo1->next = NULL;
-	return (nodo1);
+	map = NULL;
+	while (iter)
+	{
+		content = f(iter->content);
+		new_node = ft_lstnew(content);
+		if (!new_node)
+		{
+			del(content);
+			ft_lstclear(&map, del);
+			return (0);
+		}
+		ft_lstadd_back(&map, new_node);
+		iter = iter->next;
+	}
+	return (map);
 }
