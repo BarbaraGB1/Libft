@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 19:47:20 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/11 12:56:35 by bargarci         ###   ########.fr       */
+/*   Created: 2023/04/17 20:52:36 by bargarci          #+#    #+#             */
+/*   Updated: 2023/04/17 20:52:42 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*nodo;
-	size_t	i;
 
-	i = 0;
 	nodo = lst;
-	while (nodo != '\0')
+	if (!nodo || !f)
+		return ;
+	while (nodo)
 	{
+		f(nodo->content);
 		nodo = nodo->next;
-		i++;
 	}
-	return (i);
 }

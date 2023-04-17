@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 13:05:55 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/17 17:10:37 by bargarci         ###   ########.fr       */
+/*   Created: 2023/04/17 20:39:51 by bargarci          #+#    #+#             */
+/*   Updated: 2023/04/17 20:40:45 by bargarci         ###   ########.fr       */
 /*                                                                            */
-/* *********************************************************************/
-#include <stdio.h>
-#include <string.h>
-
+/* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -31,7 +28,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	size_t n;
@@ -41,4 +38,4 @@ int main(void)
 	char str2[] = "mHoa, mulndmmmmmmmo!";
 	printf("%s", memchr(str2, j, n));
 	printf("%s", ft_memchr(str2, j, n));
-}
+}*/

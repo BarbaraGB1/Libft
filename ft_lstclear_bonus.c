@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 18:12:21 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/12 16:14:56 by bargarci         ###   ########.fr       */
+/*   Created: 2023/04/17 20:51:41 by bargarci          #+#    #+#             */
+/*   Updated: 2023/04/17 20:51:46 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	t_list	*nodo;
+	t_list	*a;
+
 	if (!lst || !del)
 		return ;
-	del(lst->content);
-	free(lst);
+	nodo = *lst;
+	while (nodo)
+	{
+		del(nodo->content);
+		a = nodo->next;
+		free(nodo);
+		nodo = a;
+	}
+	*lst = NULL;
 }
