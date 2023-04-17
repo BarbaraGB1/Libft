@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:07:19 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/30 15:40:46 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/17 20:02:27 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -71,4 +71,5 @@ int num = -10;
 
     printf("El número %d convertido a una cadena es: %s\n", num2, str2);
    
-    return 0;}*/
+    return 0;
+}*/

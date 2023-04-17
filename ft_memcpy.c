@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:35:44 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/14 16:16:57 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:44:33 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,3 +29,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst1);
 }
+/*#include <stdio.h>
+int main(void)
+{
+	char dst = " ";
+	const char src []= "adios";
+	printf("%s", ft_memcpy(dst, src, 4));
+}*/

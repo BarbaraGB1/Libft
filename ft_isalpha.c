@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:09:07 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/13 20:16:23 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:42:15 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isalpha(int a)
@@ -15,10 +15,10 @@ int	ft_isalpha(int a)
 		return (1);
 	return (0);
 }
-
-/*int	main(void)
+/*#include <stdio.h>
+int	main(void)
 {
 	int	a;
-	a = '0';
-	ft_isalpha(a);
+	a = 'A';
+	printf("%d",ft_isalpha(a));
 }*/

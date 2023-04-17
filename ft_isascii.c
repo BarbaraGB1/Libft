@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 12:16:17 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/09 13:05:52 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:31:22 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isascii(int c)
@@ -15,3 +15,11 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
+/*#include<stdio.h>
+int main(void)
+{
+	int	c;
+
+	c = 130;
+	printf("%d",ft_isascii(c));
+}*/

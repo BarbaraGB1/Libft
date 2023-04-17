@@ -6,7 +6,7 @@
 /*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:06:22 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/12 16:33:50 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/17 20:08:24 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	void	*content;
 
 	iter = lst;
-	if (!iter || !f  || !del)
+	if (!iter || !f || !del)
 		return (0);
 	map = NULL;
 	while (iter)

@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:44:17 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/09 17:14:04 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:30:50 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,3 +19,11 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+/*#include <stdio.h>
+int main(void)
+{
+	int c;
+
+	c = '\0';
+	printf("%d", ft_isalnum(c));
+}*/

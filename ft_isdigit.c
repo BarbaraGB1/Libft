@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:14:54 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/13 20:22:56 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:25:09 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isdigit(int c)
@@ -15,3 +15,11 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+/*#include <stdio.h>
+int main (void)
+{
+	int 	c;
+
+	c = 'A';
+	printf("%d", ft_isdigit(c));
+}*/

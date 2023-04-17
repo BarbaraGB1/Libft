@@ -6,7 +6,7 @@
 /*   By: bargarci <bargarci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:44:05 by bargarci          #+#    #+#             */
-/*   Updated: 2023/04/04 18:59:00 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:53:11 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -85,14 +85,14 @@ char	**ft_split(char const *s, char c)
 	str[j] = 0;
 	return (str);
 }
-
-/*int main(void)
+/*#include <stdio.h>
+int main(void)
 {
 	
-	char *s = "\0aa\0bbb";
+	char *s = " hola que tal";
 	char c;
 	int x;
-	c = '\0';
+	c = ' ';
 	
 x = ft_count(s, c);
 	

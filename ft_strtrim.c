@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:55:15 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/24 18:59:10 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:55:40 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -57,3 +57,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_substr(s1, start, (finish - start)));
 	}
 }
+/*#include <stdio.h>
+int main(void)
+{
+	char const *s1 = "//AAhola//AA";
+	char const *set = "/A";
+
+	printf("%s",ft_strtrim(s1, set));
+}*/

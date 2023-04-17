@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/04/17 19:27:56 by bargarci          #+#    #+#              #
+#    Updated: 2023/04/17 20:08:45 by bargarci         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -15,10 +27,13 @@ OBJ_BONUS = ${SRCBONUS:%.c=%.o}
 all: ${NAME}
 
 bonus : ${OBJ_BONUS} ${OBJ} 
-	ar -rcs ${NAME} ${BONUS} ${OBJ_BONUS} ${BONUS}
+	ar -rcs ${NAME} ${BONUS} ${OBJ_BONUS}
 
 ${NAME}: ${OBJ}
 	ar -rcs ${NAME} ${OBJ}
+
+${BONUS}: ${OBJ_BONUS}
+	ar -rcs ${BONUS} ${OBJ_BONUS}
 
 %.o: %.c
 	$(COMPILE) -c $< -o $@
@@ -31,7 +46,7 @@ clean:
 	@echo OK
 
 fclean: clean
-	@rm -f ${NAME} ${BONUS}
+	@rm -f ${NAME}
 re: fclean all
 
 ra: fclean bonus

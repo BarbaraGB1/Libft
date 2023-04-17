@@ -6,7 +6,7 @@
 /*   By: bargarci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 19:07:02 by bargarci          #+#    #+#             */
-/*   Updated: 2023/03/14 19:33:45 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:40:14 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,3 +39,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+/*#include <stdio.h>
+int main(void)
+{
+	char dst[] = "hola1";
+	const char src[] = "hola2";
+//	size_t len = 3;
+	printf("%s",ft_memmove(dst, src, 8));
+}*/
